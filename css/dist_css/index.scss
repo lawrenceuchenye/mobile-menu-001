@@ -23,4 +23,11 @@ body {
 
 .hamburger-menu input {
   appearance: none;
+  padding: none;
+  margin: 0;
+  outline: none;
+}
+
+.hamburger-menu input:checked {
+  background: $background;
 }
