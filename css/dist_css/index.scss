@@ -1,0 +1,26 @@
+@import "./partials/reset";
+@import "./partials/variables";
+
+body {
+  padding: 10px;
+}
+
+.hamburger-menu input,
+.hamburger-menu::after,
+.hamburger-menu::before {
+  content: "";
+  width: $bar-width;
+  height: $bar-height;
+  background-color: $foreground;
+  border-radius: 3px;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: $bar-gap;
+}
+
+.hamburger-menu input {
+  appearance: none;
+}

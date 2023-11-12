@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+body {
+  padding: 10px;
+}
+
+.hamburger-menu input,
+.hamburger-menu::after,
+.hamburger-menu::before {
+  content: "";
+  width: 60px;
+  height: 6px;
+  background-color: #000;
+  border-radius: 3px;
+}
+
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger-menu input {
+  appearance: none;
+}
+
+/*# sourceMappingURL=index.css.map */

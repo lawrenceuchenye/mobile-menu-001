@@ -1,0 +1,13 @@
+{
+  "name": "mobile_menu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass --watch /root/mobile_menu/css/dist_css:/root/mobile_menu/css/out_css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
