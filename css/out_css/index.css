@@ -22,12 +22,19 @@ body {
   height: 6px;
   background-color: #000;
   border-radius: 3px;
+  transition: opacity 0.2s ease-in-out, width 0.2s ease-in-out;
 }
 
 .hamburger-menu {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 8px;
+  width: max-content;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 2;
+  cursor: pointer;
 }
 
 .hamburger-menu input {
@@ -35,10 +42,16 @@ body {
   padding: none;
   margin: 0;
   outline: none;
+  pointer: none;
 }
 
 .hamburger-menu input:checked {
-  background: #fff;
+  opacity: 0;
+  width: 0;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
 }
 
 /*# sourceMappingURL=index.css.map */

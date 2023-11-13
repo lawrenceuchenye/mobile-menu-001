@@ -13,12 +13,22 @@ body {
   height: $bar-height;
   background-color: $foreground;
   border-radius: 3px;
+
+  transition:
+    opacity $animation-timing,
+    width $animation-timing;
 }
 
 .hamburger-menu {
   display: flex;
   flex-direction: column;
   gap: $bar-gap;
+  width: max-content;
+  position: absolute;
+  top: $hamburger-margin;
+  left: $hamburger-margin;
+  z-index: 2;
+  cursor: pointer;
 }
 
 .hamburger-menu input {
@@ -26,8 +36,14 @@ body {
   padding: none;
   margin: 0;
   outline: none;
+  pointer: none;
 }
 
 .hamburger-menu input:checked {
-  background: $background;
+  opacity: 0;
+  width: 0;
+}
+
+.hamburger-menu:has(input:checked)::before {
+  rotate: 45deg;
 }
