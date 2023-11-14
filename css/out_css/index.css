@@ -50,8 +50,8 @@ body {
   width: 0;
 }
 
-.hamburger-menu:has(input:checked)::before {
-  rotate: 45deg;
+.hamburger-menu input:checked ~ .hamburger-menu {
+  background: red;
 }
 
 /*# sourceMappingURL=index.css.map */
