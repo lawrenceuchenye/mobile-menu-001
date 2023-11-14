@@ -32,6 +32,8 @@ body {
   margin: auto;
   display: flex;
   align-items: center;
+  transform: rotate(0deg);
+  transition: 0.8s;
 }
 
 .hamburger-icon span {
@@ -45,16 +47,42 @@ body {
   box-shadow:
     0 0 5px #0ef,
     0 0 10px #0ef;
+  transition: 0.3s;
 }
 
 .hamburger-icon span:nth-child(1) {
   top: 0;
   left: 0;
   width: 50%;
+  transform: translateY(0px);
+}
+
+.hamburger-icon span:nth-child(2) {
+  transform: scaleX(1);
+  opacity: 1;
 }
 
 .hamburger-icon span:nth-child(3) {
   right: 0;
   bottom: 0;
   width: 50%;
+}
+
+.hamburger-wrapper.active .hamburger-icon {
+  transform: rotate(315deg);
+}
+.hamburger-wrapper.active span:nth-child(1) {
+  transform: translateY(73px);
+  width: 100%;
+}
+
+.hamburger-wrapper.active span:nth-child(2) {
+  transform: scaleX(0);
+  opacity: 0;
+}
+
+.hamburger-wrapper.active span:nth-child(3) {
+  width: 100%;
+  transform: rotate(90deg);
+  bottom: 73px;
 }
